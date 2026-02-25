@@ -37,10 +37,10 @@ conectado(X, Y, C) :-
 % ¿UN NODO TIENE ARISTAS?
 % ==============================
 
-tiene_aristas(X) :-
-    arista(X, _, _).
-tiene_aristas(X) :-
-    arista(_, X, _).
+estan_conectados(X, Y) :-
+    arista(X, Y, _).
+estan_conectados(X, Y) :-
+    arista(Y, X, _).
 
 
 % ==============================
