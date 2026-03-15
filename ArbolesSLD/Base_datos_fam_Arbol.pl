@@ -60,3 +60,7 @@ tia_de(X, Y) :-
     mujer(X),
     hermanos(X, Z),
     progenitor(Z, Y).
+
+
+% ----- ARBOLES
+    % ----- es_madre(X), es_padre(X), es_tia(X, Y)
