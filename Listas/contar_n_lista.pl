@@ -30,6 +30,9 @@ k_element([_|T], K, Elemento) :-
     k_element(T, K_aux, Elemento).
 
 
+%Consulta: k_element([a, b, c, d, e], 2, X).
+
+
 
 
 
