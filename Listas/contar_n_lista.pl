@@ -17,6 +17,17 @@ count([H|T], N) :-
    ;  N is X
    ).
 
+%----Geminis-----------------------------------------------------------------------
+
+% Caso Base: El elemento en la posición 0 es la cabeza (H) de la lista.
+k_element([H|_], 0, H). 
+
+% Caso Recursivo: El elemento en la posición K es el mismo que 
+% el elemento en la posición K-1 del resto de la lista (T).
+k_element([_|T], K, Elemento) :-
+    K > 0,
+    K_aux is K - 1,
+    k_element(T, K_aux, Elemento).
 
 
 
