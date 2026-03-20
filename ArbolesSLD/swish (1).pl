@@ -1,0 +1,1 @@
+:- ancestro(manuel, sara).
