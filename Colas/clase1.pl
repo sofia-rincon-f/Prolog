@@ -30,8 +30,8 @@ poligono([S1][S2|Tail])
 
 
 poligono_cerrado([S1|Tail]):-
-	proper_length(Tail, Len),
-	len>1,
+	proper_length(Tail, Numero_elementos),
+	Numero_elementos>1,
 	append([S1], Tall, Nombre),
 	poligono(Nombre, L),
 	conectados(L, S1). 
