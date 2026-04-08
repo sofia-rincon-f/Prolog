@@ -37,4 +37,9 @@ poligono_cerrado([S1|Tail]):-
 	conectados(L, S1). 
 	
 %consulta
+
+
+triangulo(Poligono):- 
+    proper_length(Poligomo, 3),
+   	poligono_cerrado(Poligono). 
 	
