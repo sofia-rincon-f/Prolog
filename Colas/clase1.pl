@@ -1,0 +1,23 @@
+%punto(X,Y)
+%Segmento(punto(X1,Y1), punto(X2, Y2)
+
+%S(segmento(punto(0,0), punto(0,1))),
+%S(segmento(punto(0,1), punto(1,0))),
+%S(segmento(punto(1,0), punto(0,0))),
+
+conectados(S1, S2):-
+    S1=..[segmento,_,P],
+    S2=..[segmento,P,_].
+
+conectados_v2(segmento(_,P),segmento(P,_)). 
+
+%paso base
+
+poligono([S1, S2]):-
+    	conectados(S1, S2).
+
+%paso recursivo 
+poligono([S1][S2|Tail]) 
+	conectados(S1,S2),
+	append([S2], Tail, nombre), %append adiciona un elemento
+	poligono(nombre).
