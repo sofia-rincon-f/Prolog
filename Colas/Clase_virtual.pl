@@ -35,8 +35,8 @@ conexiones([conexion(ciudad(v),ciudad(e), costo(16)),
 
 
 hay_conexion(O,D):-
-    conexiones(LC),
-    member(Conexion) %Variable
+    conexiones(LC), %Lista de conexiones, darle nombre 
+    member(conexion(ciudad(O), ciudad(D),_),LC) %Omito costo porque no me interesa
 
 
 
