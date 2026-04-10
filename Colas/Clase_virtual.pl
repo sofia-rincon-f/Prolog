@@ -43,4 +43,5 @@ esta_conectado_con(O, D, C):-
     	member(conexion(ciudad(O), ciudad(D), costo(C)),LC).
 
     
-//Parcial mismas reglas terminar con el resto de peticiones de las ciudades
+//1. Parcial mismas reglas terminar con el resto de peticiones de las ciudades
+//2. Mejorar modificar familia de los simpson, diseñar que puedo cambiar con listas y estructuras
