@@ -38,5 +38,9 @@ hay_conexion(O,D):-
     conexiones(LC), %Lista de conexiones, darle nombre 
     member(conexion(ciudad(O), ciudad(D),_),LC) %Omito costo porque no me interesa
 
+esta_conectado_con(O, D, C):-
+    	conexiones(LC), 
+    	member(conexion(ciudad(O), ciudad(D), costo(C)),LC).
 
-
+    
+//Parcial mismas reglas terminar con el resto de peticiones de las ciudades
