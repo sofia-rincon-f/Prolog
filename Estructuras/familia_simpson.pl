@@ -45,13 +45,13 @@ es_abuela(A, N) :-
 
 hermana(A, B) :-
     familia(FM),
-    member(relacion(P, _, A, mujer), FM),
+    member(relacion(P, hombre, A, mujer), FM),
     member(relacion(P, _, B, _), FM),
     A \= B.
 
 hermano(A, B) :-
     familia(FM),
-    member(relacion(P, _, A, hombre), FM),
+    member(relacion(P, hombre, A, hombre), FM),
     member(relacion(P, _, B, _), FM),
     A \= B.
 
