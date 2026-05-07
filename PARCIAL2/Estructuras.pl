@@ -17,6 +17,12 @@ generacion(N, [t(I, _, D) | T], L) :-
     append(L1, L2, L).
 
 
+%generacion(0, [], Nodos). LISTA VACIA
+%generacion(0, [t(a, 5, [])], Nodos). UN SOLO ARBOL SIN HIJOS
+%generacion(0, [t(a,1,[]), t(b,2,[]), t(c,3,[])], Nodos). MUCHOS ARBOLES SIN HIJOS
+%generacion(1, [t(t(a,1,[]), 10, [])], Nodos). HIJO IZQUIERDO
+%generacion(1, [t(t(a,1,[]), 10, t(b,20,[]))], Nodos).
+
     %------------------------------------------------------------------------------------------
 
     Forma member
@@ -27,3 +33,7 @@ generacion(N, Arboles, Nodos) :-
     N1 is N - 1,
     expandir_arboles(Arboles, SubArboles),
     generacion(N1, SubArboles, Nodos).
+
+
+
+    
